@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/w3schools31.css">
+</head>
+
+<body>
+  <div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left: 220px; padding-top: 44px;">
+    <div class="w3-row w3-white">
+      <div id="main" class="w3-col m12">
+        <h1>JavaScript Let</h1>
+        <div class="w3-clear nextprev">
+          <a class="w3-left w3-btn" href="previous.html"> ❮ Previous</a>
+          <a class="w3-right w3-btn" href="next.html">Next ❯</a>
+        </div>
+        <div class="w3-info">
+          <p>The <code class="w3-codespan">let</code> keyword was introduced in
+            <a href="js_es6.asp">ES6 (2015)</a>.
+          </p>
+          <p>Variables defined with <code class="w3-codespan">let</code> <b>can not be redeclared</b>.</p>
+          <p>Variables defined with <code class="w3-codespan">let</code> <b>must be declared before use</b>.</p>
+          <p>Variables defined with <code class="w3-codespan">let</code> <b>have block scope</b>.</p>
+        </div>
+        <h2>Cannot be Redeclared</h2>
+        <p>Variables defined with <code class="w3-codespan">let</code> <b>can not be redeclared</b>.</p>
+        <p>You can not accidentally redeclare a variable declared with <code class="w3-codespan">let</code>.</p>
+        <div class="w3-example">
+          <p>With <code class="w3-codespan">let</code> you can <b>not</b> do this:</p>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsstringcolor"
+                style="color:brown">"John Doe"</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">0</span>;<span class="jsnumbercolor" style="color:red">
+              </span> </span></div>
+        </div>
+        <div class="w3-example">
+          <p>With <code class="w3-codespan">var</code> you can:</p>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsstringcolor"
+                style="color:brown">"John Doe"</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><br>
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">0</span>;<span class="jsnumbercolor" style="color:red">
+              </span> </span></div>
+        </div>
+
+        <hr>
+
+        <h2>Block Scope</h2>
+        <p>Before ES6 (2015), JavaScript had <b>Global Scope</b> and <b>Function Scope</b>.</p>
+        <p>ES6 introduced two important new JavaScript keywords: <code class="w3-codespan">let</code> and <code
+            class="w3-codespan">const</code>.</p>
+        <p>These two keywords provide <strong>Block Scope</strong> in JavaScript.</p>
+        <p>Variables declared inside a { } block cannot be accessed
+          from outside the block:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor"
+                style="color:red">
+              </span>{ <br><span class="jsnumbercolor" style="color:red">
+              </span>&nbsp;&nbsp;<span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span
+                class="jsnumbercolor" style="color:red">2</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span> }<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// x can NOT be used here </span></span></div>
+        </div>
+
+        <p>Variables declared with the <code class="w3-codespan">var</code> keyword can NOT have block scope.</p>
+        <p>Variables declared inside a { } block can be accessed from
+          outside the block. </p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor"
+                style="color:red">
+              </span>{ <br><span class="jsnumbercolor" style="color:red">
+              </span>&nbsp;&nbsp;<span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span
+                class="jsnumbercolor" style="color:red">2</span>; <br><span class="jsnumbercolor" style="color:red">
+              </span> }<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// x CAN be used here </span></span></div>
+        </div>
+
+
+
+        <hr>
+        <h2>Redeclaring Variables</h2>
+
+        <p>Redeclaring a variable using the <code class="w3-codespan">var</code> keyword can impose problems.</p>
+        <p>Redeclaring a variable inside a block will also redeclare the variable
+          outside the block:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">10</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 10<br></span><span
+                class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span>{ <br>
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 2<br></span>}<br><span
+                class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 2 </span></span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_es6_var" target="_blank">Try it Yourself
+            »</a>
+        </div>
+
+        <p>Redeclaring a variable using the <code class="w3-codespan">let</code> keyword can solve this problem.</p>
+        <p>Redeclaring a variable inside a block will not redeclare the variable outside
+          the block:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">10</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 10<br></span><span
+                class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span>{<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 2<br></span>}<br><span
+                class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Here x is 10
+              </span></span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_es6_let" target="_blank">Try it Yourself
+            »</a>
+        </div>
+        <hr>
+        <h2>Browser Support</h2>
+        <p>The <code class="w3-codespan">let</code> keyword is not fully supported in Internet Explorer 11 or earlier.
+        </p>
+        <p>The following table defines the first browser versions with full support for the <code
+            class="w3-codespan">let</code> keyword: </p>
+        <div class="w3-responsive">
+          <table class="browserref notranslate">
+            <tbody>
+              <tr>
+                <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                <th style="width:20%;" class="bsOpera" title="Opera"></th>
+              </tr>
+              <tr>
+                <td>Chrome 49</td>
+                <td>Edge 12</td>
+                <td>Firefox 44</td>
+                <td>Safari 11</td>
+                <td>Opera 36</td>
+              </tr>
+              <tr>
+                <td>Mar, 2016</td>
+                <td>Jul, 2015</td>
+                <td>Jan, 2015</td>
+                <td>Sep, 2017</td>
+                <td>Mar, 2016</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+          <!-- MidContent -->
+          <!-- <p class="adtext">Advertisement</p> -->
+
+          <div id="adngin-mid_content-0"></div>
+
+        </div>
+        <hr>
+
+        <h2>Redeclaring</h2>
+        <p>Redeclaring a JavaScript variable with <code class="w3-codespan">var</code> is allowed
+          anywhere in a program:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Now x is 2<br></span><span class="jsnumbercolor"
+                style="color:red">
+              </span><br>
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">3</span>;<br><span class="jsnumbercolor" style="color:red">
+              </span><span class="commentcolor" style="color:green">// Now x is 3
+              </span></span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_let_redeclare_var" target="_blank">Try it
+            Yourself »</a>
+        </div>
+        <p>With <code class="w3-codespan">let</code>, redeclaring a variable in the same block is NOT allowed:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">// Not
+                allowed<br></span><span class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span>{<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">// Not
+                allowed<br></span><span class="jsnumbercolor" style="color:red">
+              </span>}<br><span class="jsnumbercolor" style="color:red">
+              </span><br><span class="jsnumbercolor" style="color:red">
+              </span>{<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span>
+              <span class="jskeywordcolor" style="color:mediumblue">var</span> x = <span class="jsnumbercolor"
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">// Not
+                allowed<br></span><span class="jsnumbercolor" style="color:red">
+              </span>}<br><span class="jsnumbercolor" style="color:red">
+              </span> </span></div>
+        </div>
+
+        <p>Redeclaring a variable with <code class="w3-codespan">let</code>, in another block, IS allowed:</p>
+
+        <div class="w3-example">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black">
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span><br>{<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span><span class="jsnumbercolor" style="color:red">
+              </span> }<br><span class="jsnumbercolor" style="color:red">
+              </span> <br><span class="jsnumbercolor" style="color:red">
+              </span> {<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> x = <span class="jsnumbercolor"
+                style="color:red">4</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span class="commentcolor" style="color:green">//
+                Allowed<br></span><span class="jsnumbercolor" style="color:red">
+              </span> } </span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_let_redeclare" target="_blank">Try it
+            Yourself »</a>
+        </div>
+
+
+        <hr>
+        <h2>Let Hoisting</h2>
+        <p>Variables defined with <code class="w3-codespan">var</code> are <strong>hoisted</strong> to the top
+          and can be initialized at any time.
+        </p>
+        <p>Meaning: You can use the variable before it is declared:</p>
+        <div class="w3-example">
+          <h3>Example</h3>
+          <p>This is OK:</p>
+          <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor"
+                style="color:red">
+              </span> carName = <span class="jsstringcolor" style="color:brown">"Volvo"</span>;<br><span
+                class="jsnumbercolor" style="color:red">
+              </span> <span class="jskeywordcolor" style="color:mediumblue">var</span> carName;<span
+                class="jsnumbercolor" style="color:red">
+              </span> </span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_let_hoisting_var" target="_blank">Try it
+            Yourself »</a>
+        </div>
+        <p>If you want to learn more about hoisting, study the chapter <a href="js_hoisting.asp">JavaScript
+            Hoisting</a>.
+
+
+        </p>
+        <p>Variables defined with <code class="w3-codespan">let</code> are also hoisted to the top
+          of the block, but not initialized.</p>
+        <p>Meaning: Using a <code class="w3-codespan">let</code> variable before it is declared will result in a
+          <code class="w3-codespan">ReferenceError</code>:
+        </p>
+
+        <div class="w3-example w3-pale-red">
+          <h3>Example</h3>
+          <div class="w3-code notranslate jsHigh w3-border-red"><span class="jscolor" style="color:black">
+              carName = <span class="jsstringcolor" style="color:brown">"Saab"</span>;<br>
+              <span class="jskeywordcolor" style="color:mediumblue">let</span> carName = <span class="jsstringcolor"
+                style="color:brown">"Volvo"</span>; </span></div>
+          <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_let_hoisting_let" target="_blank">Try it
+            Yourself »</a>
+        </div>
+
+        <br>
+
+        <div class="w3-clear nextprev">
+          <a class="w3-left w3-btn" href="js_variables.asp">❮ Previous</a>
+          <a class="w3-right w3-btn" href="js_const.asp">Next ❯</a>
+        </div>
+        <div id="mypagediv2" style="position:relative;text-align:center;"></div>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

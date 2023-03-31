@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'w3schools31.css' %}">
+</head>
+
+<body>
+  <div class="w3-main w3-light-grey" id="belowtopnav" style="margin-left: 220px; padding-top: 44px;">
+    <div class="w3-row w3-white">
+      <div id="main" class="w3-col m12">
+
+        <h1>Maximum flow</h1>
+        <div class="w3-clear nextprev">
+          <a class="w3-left w3-btn" href="previous.html"> ❮ Previous</a>
+          <a class="w3-right w3-btn" href="next.html">Next ❯</a>
+        </div>
+
+        <h2>The maximum flow problem</h2>
+        <p>
+          The goal of the maximum flow problem is to find the maximum amount of
+          flow that can be sent from a designated source node `s` to a designated
+          sink node `t`, while satisfying the capacity constraints on the edges.
+          This problem has numerous practical applications, such as determining
+          the maximum amount of traffic that can flow through a transportation
+          network or the maximum amount of data that can be transmitted through
+          a communication network.
+        </p>
+        <p>
+          The maximum flow problem can be solved using a variety of algorithms,
+          these are some of the most famous:
+        </p>
+        <table class="ws-table-all notranslate">
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <th>Time complexity</th>
+              <th>Space complexity</th>
+            </tr>
+            <tr>
+              <td>Ford-Fulkerson</td>
+              <td>O(|E| * f)</td>
+              <td>O(V + E)</td>
+            </tr>
+            <tr>
+              <td>Edmonds-Karp</td>
+              <td>O(V * E**2) </td>
+              <td>O(V + E)</td>
+            </tr>
+            <tr>
+              <td>Dinic's</td>
+              <td>O(V**2 * E)</td>
+              <td>O(V + E)</td>
+            </tr>
+            <tr>
+              <td>Relabel-to-front</td>
+              <td>O(V**3)</td>
+              <td>O(V + E)</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h2> An Relabel-to-front python implentation </h2>
+        <h4>Vertex.py:</h4>
+        {% include 'Vertex.py.html' %}
+        <h4>Arc.py:</h4>
+        {% include 'Arc.py.html' %}
+        <h4>FlowNetwork.py:</h4>
+        {% include 'FlowNetwork.py.html' %}
+        <h4>NetworkLoader.py:</h4>
+        {% include 'NetworkLoader.py.html' %}
+        <h4>main.py:</h4>
+        {% include 'main.py.html' %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

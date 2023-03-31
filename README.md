@@ -7,5 +7,5 @@ Haz click [aqui](http://181.95.39.47:80) para visitar el sitio
 
 Este proyecto se encuentra en una fase muy temprana de desarrollo por lo que presenta los siguientes problemas que resolveremos durante el desarrollo:
 1. El diseño es una copia descarada de w3school
-2. Hay mucha repetición de código y malos nombres de variable
+2. Hay mucha repetición de código y malos nombres
 3. El sitio web no tiene un nombre de dominio, por lo que debe ser accedido desde la dirección IP del server
